@@ -29,8 +29,6 @@ public static Connection provideConnection() {
 		}
 		
 		
-		
-		
 		return conn;
 		
 	}
