@@ -6,5 +6,7 @@ import com.bank.exceptions.AdminExp;
 public interface AdminDao {
 	
 	public Admin adminLogin(String email,String pass)throws AdminExp ;
+	
+	public void customerDetail();
 
 }

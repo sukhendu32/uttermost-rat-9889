@@ -21,7 +21,7 @@ public class Main {
 				
 			}else if(n==2) {
 				
-				
+				CustomerUC.main(null);
 				
 				
 			}

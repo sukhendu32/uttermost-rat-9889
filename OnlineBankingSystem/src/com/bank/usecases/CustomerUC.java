@@ -20,7 +20,8 @@ public class CustomerUC {
     	   
     	   int n=sc.nextInt();
     	   
-    	   if(n==1) {
+    	   // login or register open
+    	   if(n==1) {    
     		   
     		   System.out.println("Please Enter your EMAIl");
     		   String e=sc.next();
@@ -30,9 +31,15 @@ public class CustomerUC {
     		   
     		   Customer c= ci.login(e, p);
     		   
+    		   
+    		   
+    		   
     		   if(c!=null) {
     			   
+    			   
     			   System.out.println("Welcome" +c.getName());
+    			   
+    			   
     			   
     			   while(true) {
     				   
@@ -43,21 +50,56 @@ public class CustomerUC {
     				 
     				 int no=sc.nextInt();  				   
     				  
-    				 if(n==1) {
+    				 if(no==1) {
     					 
     					 
     					 System.out.println("Your current balance "+c.getAmount());
     					 
-    				 }else if(n==2) {
+    				 }else if(no==2) {
+    					 
+    					 
     					 
     					 System.out.println("Enter amount to deposit");
     					 int amt=sc.nextInt();
     					 
     					 ci.deposit(amt, c.getAccno());
     					 
+    					 c.setAmount(c.getAmount()+amt);
+    					 
+    					 
+    					 
+    				 }else if(no==3) {
+    					 
+    					 
+    					 System.out.println("Enter amount for Payment");
+    					 int amt=sc.nextInt();
+    					 
+    					 ci.moneyTransfer(amt, c.getAccno(), c.getAmount());
+    					 
+    					 c.setAmount(c.getAmount()-amt);
+    					 
+    					 
+    				 }else if(no==4) {
+    					 
+    					 System.out.println("Enter loan Amount");
+    					 int amt=sc.nextInt();
+    					 
+    					 
+    					 ci.loanApply(amt, c.getAccno());
     					 
     					 
     				 }
+    				 
+    				 
+    				 
+    				 
+    				 System.out.println("wany to continue y/n");
+    				 String s=sc.next();
+    					
+    				 if(s.equals("n") || s.equals("N")) {
+    						
+    						break;
+    					}
     				   
     				   
     				   

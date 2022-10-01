@@ -58,4 +58,41 @@ public class AdminImpl implements AdminDao {
 		return admin;
 	}
 
+	@Override
+	public void customerDetail() {
+		
+		try(Connection conn=DButil.provideConnection()) {
+			
+			PreparedStatement ps=conn.prepareStatement("select * from customer");
+			
+			 ResultSet rs=  ps.executeQuery();
+			
+			 int count=1;
+			 
+			 while(rs.next()) {
+				 
+				 
+				 
+				System.out.println(count+" --> Account number : "+rs.getInt("ac_no"));
+				System.out.println("Name : "+rs.getString("name"));
+				System.out.println("Amount : "+rs.getInt("amount"));
+				System.out.println("Loan amount : "+rs.getInt("loan"));
+				
+				 System.out.println("************************************************************");
+				 count++;
+				 
+				 
+			 }
+			 
+			 
+			 
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+	}
+
 }

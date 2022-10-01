@@ -10,5 +10,8 @@ public interface CustomerDao {
 	
 	public void deposit(int amt ,int acc);
 	
-
+	public void moneyTransfer(int paya,int acc,int amt);
+	
+    public void loanApply(int amt,int acc);
+	
 }
