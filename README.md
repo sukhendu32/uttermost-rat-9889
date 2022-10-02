@@ -68,17 +68,17 @@ Tables are created with their structural detail :-
 feature
 
 1- customer:-
-Register as a new Customer.
-log-in if already a customer of the bank(with email and password)
-Check Balance.
-Deposit money.
-Money-Transfer
-Apply for loan
+* Register as a new Customer.
+* log-in if already a customer of the bank(with email and password)
+* Check Balance.
+* Deposit money.
+* Money-Transfer
+* Apply for loan
 
 2-Admin:-
-Log in (with the data already created in the admin table of the database)
-See customer detail
-See deposits made by various customers day-wise.
-see payment made by various customers day-wise.
-Approve the loan which the customer has applied for.
+* Log in (with the data already created in the admin table of the database)
+* See customer detail
+* See deposits made by various customers day-wise.
+* see payment made by various customers day-wise.
+* Approve the loan which the customer has applied for.
 
