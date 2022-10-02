@@ -29,6 +29,10 @@ public class CustomerImpl implements CustomerDao {
 
 			 int x= ps.executeUpdate();
 			 
+			 
+			 
+			 
+			 
 			
 			
 			 if(x>0)
@@ -114,6 +118,17 @@ public class CustomerImpl implements CustomerDao {
 		  
 		  int i= ps.executeUpdate();
 		  
+		  
+		  
+		  
+//		  PreparedStatement ps2=conn.prepareStatement("  insert into deposit (ac_no,amount) values(?,?)");
+//			 
+//			 ps2.setInt(1,acc );
+//			 ps2.setInt(2, amt);
+//			 
+//			 ps2.executeUpdate();
+		  
+		  
 		  if(i>0 && j>0)
 			  System.out.println("Deposit made of Amount "+amt);
 		  
@@ -151,6 +166,14 @@ public class CustomerImpl implements CustomerDao {
 				 ps.setInt(2, acc);
 				 
 			    int x=ps.executeUpdate();
+			    
+			    
+//			    PreparedStatement ps2=conn.prepareStatement("  insert into payment (ac_no,amount) values(?,?)");
+//				 
+//				 ps2.setInt(1,acc );
+//				 ps2.setInt(2, paya);
+//				 
+//				 ps2.executeUpdate();
 				
 			    
 			    if(x>0 && z>0)

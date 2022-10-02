@@ -30,7 +30,8 @@ public class AdminUC {
 				
 				a = aip.adminLogin(m, p);
 				
-				System.out.println("LOG in SUCESS!!!"+a.getName());
+				System.out.println("LOG in SUCESS!!! ");
+				System.out.println("Welcome : "+a.getName());
 				
 				
 				while(true) {
@@ -39,7 +40,6 @@ public class AdminUC {
 					System.out.println("select 2 to Approve Loan");
 					System.out.println("select 3 for Deposit Detail");
 					System.out.println("select 4 for Payment Detail");
-					System.out.println("select 5 for net balance");
 					
 					
 					int no=sc.nextInt();
@@ -52,6 +52,18 @@ public class AdminUC {
 						
 					}else if(no==2) {
 						
+						
+						aip.loanApproved();
+						
+						
+					}else if(no==3) {
+						
+						aip.depositDetail();
+						
+						
+					}else if(no==4) {
+						
+						aip.paymentDetail();
 						
 					}
 					
